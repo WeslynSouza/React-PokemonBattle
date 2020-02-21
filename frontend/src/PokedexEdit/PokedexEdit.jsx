@@ -7,9 +7,10 @@ import Content from '../common/template/content'
 import Tabs from '../common/tabs/tabs'
 import TabsHeader from '../common/tabs/tabsHeader'
 import TabHeader from '../common/tabs/tabHeader'
+import TabToolsSearch from '../common/tabs/tabToolsSearch'
 import TabsContent from '../common/tabs/tabsContent'
 import TabContent from '../common/tabs/tabContent'
-import { init, create, update, remove } from './PokedexEditActions'
+import { init, create, update, remove, search, change } from './PokedexEditActions'
 
 import List from './PokedexEditList'
 import Form from './PokedexEditForm'
@@ -31,6 +32,8 @@ class PokedexEdit extends Component{
                             <TabHeader label='Incluir' icon='plus' target='tabCreate'/>
                             <TabHeader label='Alterar' icon='gear' target='tabUpdate'/>
                             <TabHeader label='Excluir' icon='trash-o' target='tabDelete'/>
+                            <TabToolsSearch id='tabList' onClick={this.props.search} placeholder='Pesquisar:'
+                                value={this.props.pokedex.search} onChange={this.props.change}/>
                         </TabsHeader>
                         <TabsContent>
                             <TabContent id='tabList'>
@@ -56,5 +59,6 @@ class PokedexEdit extends Component{
     }
 }
 
-const mapDispatchToProps = dispatch => bindActionCreators({ init, create, remove, update }, dispatch)
-export default connect(null, mapDispatchToProps)(PokedexEdit)
+const mapStateToProps = state => ({ pokedex: state.pokedex })
+const mapDispatchToProps = dispatch => bindActionCreators({ init, create, remove, update, search, change }, dispatch)
+export default connect(mapStateToProps, mapDispatchToProps)(PokedexEdit)

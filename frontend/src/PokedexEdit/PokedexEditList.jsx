@@ -15,9 +15,10 @@ class List extends Component{
             <tr key={pk._id}>
                 <td>{pk.name}</td>
                 <td>{pk.life}</td>
+                <td>{pk.type}</td>
                 <td>{pk.attacks[0].name} <br/> {pk.attacks[1].name}</td>
                 <td>{pk.attacks[0].damage} <br/> {pk.attacks[1].damage}</td>
-                <td>{pk.attacks[0].hitPercentage} <br/> {pk.attacks[1].hitPercentage}</td>
+                <td className='hidden-xs'>{pk.attacks[0].hitPercentage} <br/> {pk.attacks[1].hitPercentage}</td>
                 <td>
                     <button className='btn btn-warning' onClick={() => this.props.showUpdate(pk)}>
                         <i className='fa fa-pencil'></i>
@@ -33,15 +34,16 @@ class List extends Component{
     render(){
         return(
             <div>
-                <table className='table'>
+                <table className='table table-bordered'>
                     <thead>
                         <tr>
-                            <th>Nome</th>
-                            <th>Vida</th>
-                            <th>Ataque</th>
-                            <th>Dano</th>
-                            <th>Acerto</th>
-                            <th className='table-actions'>Ações</th>
+                            <th className='col-sm-2'>Nome</th>
+                            <th className='col-sm-2'>Vida</th>
+                            <th className='col-sm-2'>Tipo</th>
+                            <th className='col-sm-2'>Ataque</th>
+                            <th className='col-sm-1'>Dano</th>
+                            <th className='col-sm-1 hidden-xs'>Acerto</th>
+                            <th className='table-actions  '>Ações</th>
                         </tr>
                     </thead>
                     <tbody>

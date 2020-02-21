@@ -14,6 +14,21 @@ export function getList(){
     }
 }
 
+export const search = () => {
+    return (dispatch, getState) =>{
+        const pesquisa = getState().pokedex.search
+        const search = pesquisa ? `&name__regex=/${pesquisa}/` : ''
+        const request = axios.get(`${BASE_URL}/pokemonGallery?sort=-createdAt${search}`)
+            .then(resp => dispatch({type: 'POKEMON_FETCHED', payload: resp}))
+    }
+}
+
+export const change = e => ({
+    type: 'CHANGE',
+    id: e.target.id,
+    payload: e.target.value
+})
+
 export function create(values){
     return submit(values, 'post')
 }
