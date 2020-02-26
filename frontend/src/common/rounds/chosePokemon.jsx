@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 
 import { getList } from '../../PokedexEdit/PokedexEditActions'
 import ValueBox from '../widget/valueBox'
+import Row from '../layout/row'
 
 class PokemonChose extends Component{
 
@@ -51,12 +52,13 @@ class PokemonChose extends Component{
 
     render(){
         return(
-            <div>
-                <ValueBox cols='12 12' title='Escolha seu Pokemon:' color='#00c0ef'>
+            <div className='box box-info'>
+                <div className='box-header'/>
+                <div className='box-body'>
                     <center>
                         {this.renderPokemon()}
                     </center>
-                </ValueBox>
+                </div>
             </div>
         )
     }
