@@ -10,10 +10,10 @@ import TabHeader from '../common/tabs/tabHeader'
 import TabToolsSearch from '../common/tabs/tabToolsSearch'
 import TabsContent from '../common/tabs/tabsContent'
 import TabContent from '../common/tabs/tabContent'
-import { init, create, update, remove, search, change } from './pokedexEditActions'
+import { init, create, update, remove, search, change } from './pokedeexEditActions'
 
-import List from './pokedexEditList'
-import Form from './pokedexEditForm'
+import List from './pokedeexEditList'
+import Form from './pokedeexEditForm'
 
 class PokedexEdit extends Component{
 

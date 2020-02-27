@@ -3,7 +3,7 @@ import { Router, Route, IndexRoute, Redirect, hashHistory } from 'react-router'
 
 import App from './app'
 import PokeBattle from '../pokeBattle/pokeBattle'
-import PokedexEdit from '../pokedexEdit/pokedexEdit'
+import PokedexEdit from '../pokedeexEdit/pokedeexEdit'
 
 export default props =>(
     <Router history={hashHistory}>
