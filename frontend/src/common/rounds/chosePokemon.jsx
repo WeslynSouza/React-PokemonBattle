@@ -43,7 +43,7 @@ class PokemonChose extends Component{
                             <li className='list-group-item'>Tipo: {pk.type}</li>
                             <li className='list-group-item'>1º Ataque: {pk.attacks[0].name}</li>
                             <li className='list-group-item'>2º ataque: {pk.attacks[1].name}</li>
-                            <li className={`btn btn-info list-group-item`} onClick={() => this.props.click(pk, list[rand])}>Selecionar</li>
+                            <li className={`btn btn-info list-group-item`} onClick={() => this.props.handleClick(pk, list[rand])}>Selecionar</li>
                         </ul>
                     </ValueBox>
                 </div>
