@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
 import labelAndInput from '../common/form/labelAndInput'
-import { init } from './pokedeexEditActions'
+import { init } from './pokedexEditActions'
 
 class PokedexEditForm extends Component{
 

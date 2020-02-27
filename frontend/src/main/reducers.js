@@ -2,7 +2,7 @@ import { combineReducers } from 'redux'
 import { reducer as formReducer} from 'redux-form'
 import { reducer as toastrReducer } from 'react-redux-toastr' 
 
-import PokedexReducers from '../pokedeexEdit/pokedeexEditReducers'
+import PokedexReducers from '../pokedexEdit/pokedexEditReducers'
 import TabsReducers from '../common/tabs/tabReducer'
 
 const rootReducer = combineReducers({
