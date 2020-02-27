@@ -2,9 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import { getList } from '../../PokedexEdit/PokedexEditActions'
+import { getList } from '../../PokedexEdit/pokedexEditActions'
 import ValueBox from '../widget/valueBox'
-import Row from '../layout/row'
 
 class PokemonChose extends Component{
 
@@ -18,22 +17,23 @@ class PokemonChose extends Component{
         let rand = Math.floor(Math.random() * couter)
         return list.map(pk => {
             let color = ''
-            if(pk.type == 'Grama' || pk.type == 'grama'){
-                color = '#39ff14'
-            }else if(pk.type == 'Água' || pk.type == 'água'){
-                color = '#00c0ef'
-            }else if(pk.type == 'Fogo' || pk.type == 'fogo'){
-                color = 'red'
-            }else if(pk.type == 'Pedra' || pk.type == 'pedra'){
-                color = '#f39c12'
-            }else if(pk.type == 'Veneno' || pk.type == 'veneno'){
-                color = 'purple'
-            }else if(pk.type == 'Eletrico' || pk.type == 'eletrico'){
-                color = '#ffff00'
-            }else if(pk.type == 'Fantasma' || pk.type == 'fantasma'){
-                color = '#001F3F'
-            }else{
-                color = '#b87333'
+            switch(pk.type){
+                case 'Grama' || 'grama':
+                    color = '#39ff14'; break
+                case 'Água' || 'água': 
+                    color = '#00c0ef'; break
+                case 'Fogo' || 'fogo':
+                    color = 'red'; break
+                case 'Pedra' || 'pedra':
+                    color = '#f39c12'; break
+                case 'Veneno' || 'veneno':
+                    color = 'purple'; break
+                case 'Eletrico' || 'eletrico':
+                    color = '#ffff00'; break
+                case 'Fantasma' || 'fantasma':
+                    color = '#001f3f'; break
+                default:
+                    color = '#b87333'
             }
             return(
                 <div key={pk._id}>
@@ -41,8 +41,6 @@ class PokemonChose extends Component{
                         <ul className='list-group'>
                             <li className='list-group-item'>Vida: {pk.life}</li>
                             <li className='list-group-item'>Tipo: {pk.type}</li>
-                            <li className='list-group-item'>1º Ataque: {pk.attacks[0].name}</li>
-                            <li className='list-group-item'>2º ataque: {pk.attacks[1].name}</li>
                             <li className={`btn btn-info list-group-item`} onClick={() => this.props.handleClick(pk, list[rand])}>Selecionar</li>
                         </ul>
                     </ValueBox>
