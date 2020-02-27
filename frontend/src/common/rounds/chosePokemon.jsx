@@ -39,6 +39,11 @@ class PokemonChose extends Component{
                 <div key={pk._id}>
                     <ValueBox cols='6 4' title={pk.name} color={color || ''} btn='true' label='Selecionar'>
                         <ul className='list-group'>
+                            <li className='list-group-item'>
+                                <div>
+                                    <img className='box-img' src='https://media.metrolatam.com/2018/12/13/pokemongopeleas-31c6b6a876b870d3beee11227895ce58-600x400.jpg' width='100%' height='100%'/>
+                                </div>
+                            </li>
                             <li className='list-group-item'>Vida: {pk.life}</li>
                             <li className='list-group-item'>Tipo: {pk.type}</li>
                             <li className={`btn btn-info list-group-item`} onClick={() => this.props.handleClick(pk, list[rand])}>Selecionar</li>

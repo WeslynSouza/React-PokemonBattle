@@ -6,7 +6,7 @@ export default props => (
     <ul className='sidebar-menu'>
         <MenuItem path='/' label='Batalha' icon='shield'/>
         <MenuTree label='Pokedex' icon='navicon'>
-            <MenuItem path='Gallery' label='Galeria de Pokemon' icon='book'/>
+            <MenuItem path='gallery' label='Galeria de Pokemon' icon='book'/>
             <MenuItem path='edit' label='Editar Pokedex' icon='edit'/>
         </MenuTree>
     </ul>

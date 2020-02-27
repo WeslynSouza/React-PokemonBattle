@@ -11,7 +11,7 @@ class PokedexEditForm extends Component{
     render(){
         const { handleSubmit, readOnly } = this.props
         return(
-            <form role='form' onSubmit={handleSubmit}>
+            <form role='form' onSubmit={handleSubmit} encType='multipart/form-data'>
                 <div className='box-body'>
                     <Field name='name' component={labelAndInput} readOnly={readOnly}
                         placeholder='Informe nome' label='Nome:' cols='12 4' />
@@ -31,6 +31,8 @@ class PokedexEditForm extends Component{
                         placeholder='Informe o dano do ataque' label='Dano:' cols='12 4' type='Number' />
                     <Field name='attacks[1].hitPercentage' component={labelAndInput} readOnly={readOnly}
                         placeholder='Informe a chance de acerto do ataque' label='Acerto:' cols='12 4' type='Number' />
+                    <Field name='img' component={labelAndInput} readOnly={readOnly}
+                        type='file' cols='12 5' label='Imagem:'/>
                 </div>
                 <div className='box-footer'>
                     <button className={`btn btn-${this.props.submitclass}`} type='submit'>{this.props.submitlabel}</button>
