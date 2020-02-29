@@ -9,3 +9,20 @@ button{
 .box-img{
     border-radius: 20px;
 }
+
+#listPokedex{
+    height: 100%;
+    overflow: auto;
+    padding: 0px;
+}
+
+#tabPokedex{
+    height: 70rem;
+}
+
+#contentPokedex{
+    height: 100%;
+    background-color: blue;
+}
+
+

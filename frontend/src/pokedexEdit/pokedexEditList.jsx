@@ -18,7 +18,7 @@ class List extends Component{
                 <td>{pk.type}</td>
                 <td>{pk.attacks[0].name} <br/> {pk.attacks[1].name}</td>
                 <td>{pk.attacks[0].damage} <br/> {pk.attacks[1].damage}</td>
-                <td className='hidden-xs'>{pk.attacks[0].hitPercentage} <br/> {pk.attacks[1].hitPercentage}</td>
+                <td>{pk.attacks[0].hitPercentage} <br/> {pk.attacks[1].hitPercentage}</td>
                 <td>
                     <button className='btn btn-warning' onClick={() => this.props.showUpdate(pk)}>
                         <i className='fa fa-pencil'></i>
@@ -33,7 +33,7 @@ class List extends Component{
 
     render(){
         return(
-            <div>
+            <div className='table-responsive'>
                 <table className='table table-bordered'>
                     <thead>
                         <tr>
@@ -42,7 +42,7 @@ class List extends Component{
                             <th className='col-sm-2'>Tipo</th>
                             <th className='col-sm-2'>Ataque</th>
                             <th className='col-sm-1'>Dano</th>
-                            <th className='col-sm-1 hidden-xs'>Acerto</th>
+                            <th className='col-sm-1'>Acerto</th>
                             <th className='table-actions  '>Ações</th>
                         </tr>
                     </thead>
