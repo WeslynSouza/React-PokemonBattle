@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 
-import ContentHeader from '../common/template/contentHeader'
 import Content from '../common/template/content'
 import { Inicio, Fim } from '../common/rounds/inicioFim'
 import ChosePokemon from '../common/rounds/chosePokemon'
@@ -62,9 +61,7 @@ class PokeBattle extends Component {
     render(){
         return(
             <div>
-                <ContentHeader title='Batalha Pokemon' small='Versão 1.0'/>
                 <Content>
-                    <br/>
                     <If test={this.state.estado == 0}>
                         <Inicio handleClick={() => this.alteraEstado(1)}/>
                         </If>

@@ -4,7 +4,7 @@ import ValueBox from '../widget/valueBox'
 
 export const Inicio = props =>(
     <div>
-        <ValueBox cols='12 8' offset='0 2' title='' color='#00c0ef'>
+        <ValueBox cols='12 8' offset='0 2' title='Batalha Pokemon' color='#00c0ef'>
             <center>
                 <h1>Iniciar Batalha?</h1>
                 <button className='btn btn-info' onClick={props.handleClick}>Iniciar</button>

@@ -2,6 +2,10 @@ button{
     margin-left: 5px;
 }
 
+.btn-footer{
+    margin-right: 5px;
+}
+
 .table-actions{
     width: 150px;
 }
@@ -10,19 +14,38 @@ button{
     border-radius: 20px;
 }
 
-#listPokedex{
-    height: 100%;
-    overflow: auto;
-    padding: 0px;
+.box-img2{
+    border: solid #ddd 1px;
+    border-radius: 5px;
+    padding: 3px;
 }
 
-#tabPokedex{
+#listPokedex{
+    height: 63rem;
+    overflow: auto;
+    padding-left: 0px;
+    padding-right: 5px;
+}
+
+#boxPokedex{
     height: 70rem;
 }
 
-#contentPokedex{
-    height: 100%;
-    background-color: blue;
+#linha{
+    position: absolute;
+    height: 90%;
+    width: 1px;
+    background-color: #eee;
 }
+
+#listItem{
+    height: 70px;
+    font-size: 30px;
+}
+
+#ul{
+    margin-top: 10px;
+}
+
 
 
