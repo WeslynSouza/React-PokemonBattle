@@ -23,7 +23,7 @@ export default class Grid extends Component{
     }
 
     render(){
-        const gridClasses = this.toColsClasses(this.props.cols || '12 4') + 
+        const gridClasses = this.toColsClasses(this.props.cols || '') + 
             this.toOffsetClasses(this.props.offset)
         return (
             <div className={gridClasses}>

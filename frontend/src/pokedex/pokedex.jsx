@@ -11,7 +11,7 @@ class Pokedex extends Component{
         return(
             <div>
                 <Content>
-                    <ValueBoxSolid id='boxPokedex' title='Pokedex'>
+                    <ValueBoxSolid id='boxPokedex' title='Pokedex' color='box-danger' icon='book'>
                         <PokedexList/>
                         <div className='col-sm-offset-2' id='linha'></div>
                         <PokedexProfile/>

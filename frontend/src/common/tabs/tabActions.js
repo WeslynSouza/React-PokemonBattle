@@ -12,5 +12,4 @@ export function showTabs( ...tabIds ){
         type: 'TAB_SHOWED',
         payload: tabsToShow
     }
-    
 }

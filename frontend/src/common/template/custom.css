@@ -10,6 +10,14 @@ button{
     width: 150px;
 }
 
+.content-wrapper{
+    background-image: url('../../../img/46dc6aba55acce24953bbc1b09bd674c.png');
+}
+
+.icone-img{
+    margin-top: -6px;
+}
+
 .box-img{
     border-radius: 20px;
 }
@@ -18,6 +26,10 @@ button{
     border: solid #ddd 1px;
     border-radius: 5px;
     padding: 3px;
+}
+
+.box{
+    opacity: 97%;
 }
 
 #listPokedex{

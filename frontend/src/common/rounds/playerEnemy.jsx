@@ -1,5 +1,5 @@
 import React from 'react'
-import ValueBox from '../widget/valueBox'
+import ValueBoxSolid from '../widget/valueBoxSolid'
 import Row from '../layout/row'
 import Grid from '../layout/grid'
 import If from '../operator/if'
@@ -8,7 +8,7 @@ export const PlayerRound = props => {
     const player = props.player
     const enemy = props.enemy
     return(
-    <ValueBox title='Rodada - Player' cols='12 8' offset='0 2' color='#00c0ef'>
+    <ValueBoxSolid title='Rodada - Player' cols='12 8' offset='0 2' color='box-danger'>
         <center>
             <If test={props.desc != ''}>
                 <Row>
@@ -41,15 +41,15 @@ export const PlayerRound = props => {
             </Row>
         </center>
         <br/>
-    </ValueBox>
+    </ValueBoxSolid>
 )}
 
 export const Transicao = props => (
-    <ValueBox title='Transição' cols='12 8' offset='0 2' color='#00c0ef'>
+    <ValueBoxSolid title='Transição' cols='12 8' offset='0 2' color='box-danger'>
         <center>
             <h2>{props.desc}</h2>
             <br/>
             <button className='btn btn-info' onClick={props.handleClick}>Proxima rodada</button>
         </center>
-    </ValueBox>
+    </ValueBoxSolid>
 )

@@ -57,7 +57,7 @@ class PokemonChose extends Component{
 
     render(){
         return(
-            <div className='box box-info'>
+            <div className='box box-solid box-danger'>
                 <div className='box-header with-border'>
                     <h3 className='box-title'>Selecionar Pokemon</h3>
                 </div>

@@ -24,7 +24,7 @@ class PokedexEdit extends Component{
     render(){
         return(
             <div>
-                <ContentHeader title='Editar Pokedex' small='Versão 1.0'/>
+                <ContentHeader title='Editar Pokedex'/>
                 <Content>
                     <Tabs>
                         <TabsHeader>

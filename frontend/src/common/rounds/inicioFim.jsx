@@ -1,28 +1,30 @@
 import React from 'react'
 
-import ValueBox from '../widget/valueBox'
+import ValueBoxSolid from '../widget/valueBoxSolid'
 
 export const Inicio = props =>(
     <div>
-        <ValueBox cols='12 8' offset='0 2' title='Batalha Pokemon' color='#00c0ef'>
+        <ValueBoxSolid cols='12 8' offset='0 2' title='Batalha Pokemon' color='box-danger' icon='shield'>
             <center>
-                <h1>Iniciar Batalha?</h1>
+                <h1><span><img src='https://i.pinimg.com/originals/c7/3c/08/c73c081aceb4bf7e3a5737c9d3ac0736.png'
+                    width='30px' className='icone-img'/></span> Iniciar Batalha?</h1>
+                <br/>
                 <button className='btn btn-info' onClick={props.handleClick}>Iniciar</button>
             </center>
-        </ValueBox>
+        </ValueBoxSolid>
     </div>
 )
 
 
 export const Fim = props =>(
     <div>
-        <ValueBox cols='12 8' offset='0 2' title='Fim da batalha' color='#00c0ef'>
+        <ValueBoxSolid cols='12 8' offset='0 2' title='Fim da batalha' color='box-danger' icon='shield'>
             <center>
                 <h3>{props.desc}</h3>
                 <hr/>
-                <h2>{props.pokemon} vendeu!</h2>
+                <h2>{props.pokemon} venceu!</h2>
                 <button className='btn btn-info' onClick={props.handleClick}>Reiniciar batalha</button>
             </center>
-        </ValueBox>
+        </ValueBoxSolid>
     </div>
 )

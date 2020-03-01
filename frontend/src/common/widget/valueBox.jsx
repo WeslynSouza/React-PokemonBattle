@@ -5,7 +5,7 @@ export default props =>(
     <Grid cols={props.cols} offset={props.offset}>
         <div className='box' style={{borderColor: props.color ? props.color : ''}}>
             <div className='box-header with-border'>
-                <h3 className='box-title'>{props.title}</h3>
+                <h3 className='box-title'><strong>{props.title}</strong></h3>
             </div>
             <div className='box-body'>
                 {props.children}
