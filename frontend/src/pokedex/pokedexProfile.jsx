@@ -1,14 +1,43 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import ValueBoxSolid from '../common/widget/valueBoxSolid'
+import { searchProfile } from '../pokedexEdit/pokedexEditActions'
 
+import ValueBoxSolid from '../common/widget/valueBoxSolid'
 import List from '../common/template/list'
 import ListItem from '../common/template/listItem'
 
 class PokedexProfile extends Component{
 
+    componentWillMount(){
+        this.props.searchProfile()
+    }
+
+    renderAttacks(){
+        let profile
+        if(this.props.profile.length == 1){
+            profile = this.props.profile[0]
+        }else{
+            profile = this.props.profile
+        }
+
+        const attacks = profile.attacks || []
+        return attacks.map( atk =>(
+            <tr key={atk._id}>
+                <td className='col-sm-6 col-xs-12'>{atk.name}</td>
+                <td className='col-sm-3 col-xs-12'>{atk.damage}</td>
+                <td className='col-sm-3 col-xs-12'>{atk.hitPercentage}</td>
+            </tr>
+        ))
+    }
+
     render(){
+        let profile
+        if(this.props.profile.length == 1){
+            profile = this.props.profile[0]
+        }else{
+            profile = this.props.profile
+        }
         return(
             <div className='col-sm-10 col-xs-9' id='contentPokedex'>
                 <div className='col-sm-12'>
@@ -17,9 +46,9 @@ class PokedexProfile extends Component{
                     </div>
                     <div className='col-sm-6 col-xs-12'>
                         <List id='ul'>
-                            <ListItem id='listItem'>Nome: Bulbasaur</ListItem>
-                            <ListItem id='listItem'>Tipo: Grama</ListItem>
-                            <ListItem id='listItem'>Vida: 120</ListItem>
+                            <ListItem id='listItem'>Nome: {profile.name}</ListItem>
+                            <ListItem id='listItem'>Tipo: {profile.type}</ListItem>
+                            <ListItem id='listItem'>Vida: {profile.life}</ListItem>
                         </List>
                     </div>
                     <div className='col-sm-12'>
@@ -34,16 +63,7 @@ class PokedexProfile extends Component{
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>1º Ataque</td>
-                                        <td>1º Dano</td>
-                                        <td>1º Acerto</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2º Ataque</td>
-                                        <td>2º Dano</td>
-                                        <td>2º Acerto</td>
-                                    </tr>
+                                    {this.renderAttacks()}
                                 </tbody>
                             </table>
                         </ValueBoxSolid>
@@ -54,4 +74,6 @@ class PokedexProfile extends Component{
     }
 }
 
-export default PokedexProfile
+const mapStateToProps = state => ({ profile: state.pokedex.profile })
+const mapDispatchToProps = dispatch => bindActionCreators({ searchProfile }, dispatch)
+export default connect(mapStateToProps, mapDispatchToProps)(PokedexProfile)

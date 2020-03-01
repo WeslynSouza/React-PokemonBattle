@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { getList } from '../pokedexEdit/pokedexEditActions'
+import { getList, searchProfile } from '../pokedexEdit/pokedexEditActions'
 
 class PokedexList extends Component{
 
@@ -12,7 +12,7 @@ class PokedexList extends Component{
     renderPokemon(){
         const list = this.props.list || []
         return list.map( pk => (
-            <div className='btn-group-item btn btn-github' key={pk._id}>{pk.name}</div>
+            <div className='btn-group-item btn btn-github' key={pk._id} onClick={() => this.props.searchProfile(pk._id)}>{pk.name}</div>
         ))
     }
 
@@ -38,5 +38,5 @@ class PokedexList extends Component{
 }
 
 const mapStateToProps = state => ({ list: state.pokedex.list })
-const mapDispatchToProps = dispatch => bindActionCreators({ getList }, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({ getList, searchProfile }, dispatch)
 export default connect(mapStateToProps, mapDispatchToProps)(PokedexList)

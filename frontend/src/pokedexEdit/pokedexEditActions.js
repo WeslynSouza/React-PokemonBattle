@@ -79,3 +79,11 @@ export function init(){
         initialize('pokedexEditForm', INITIAL_VALUES)
     ]
 }
+
+export function searchProfile(id = ''){
+    const request = axios.get(`${BASE_URL}/PokemonGallery${id ? `/${id}` : '?skip=0&limit=1'}`)
+    return{
+        type: 'PROFILE_SEARCHED',
+        payload: request
+    }
+}
