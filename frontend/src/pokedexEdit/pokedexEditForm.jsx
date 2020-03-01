@@ -32,7 +32,7 @@ class PokedexEditForm extends Component{
                     <Field name='attacks[1].hitPercentage' component={labelAndInput} readOnly={readOnly}
                         placeholder='Informe a chance de acerto do ataque' label='Acerto:' cols='12 4' type='Number' />
                     <Field name='img' component={labelAndInput} readOnly={readOnly}
-                        type='file' cols='12 5' label='Imagem:'/>
+                        type='text' cols='12 6' label='Imagem:' placeholder='Informe o link da imagem'/>
                 </div>
                 <div className='box-footer'>
                     <button className={`btn btn-${this.props.submitclass}`} type='submit'>{this.props.submitlabel}</button>

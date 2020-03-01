@@ -42,7 +42,7 @@ class PokedexProfile extends Component{
             <div className='col-sm-10 col-xs-9' id='contentPokedex'>
                 <div className='col-sm-12'>
                     <div className='col-sm-6 col-xs-12'>
-                        <img className='box-img2' src='https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/bulbasaur-bulb.jpg' width='100%'/>
+                        <img className='box-img2' src={profile.img} width='100%'/>
                     </div>
                     <div className='col-sm-6 col-xs-12'>
                         <List id='ul'>

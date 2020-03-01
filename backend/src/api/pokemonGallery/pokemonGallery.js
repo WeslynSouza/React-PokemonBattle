@@ -11,6 +11,7 @@ const pokemonSchema = new mongoose.Schema({
     name: { type: String, required: true },
     life: { type: Number, min: 80, required: true },
     type: { type: String, required: true },
+    img: { type: String, required: true },
     attacks: [attackSchema]
 })
 
