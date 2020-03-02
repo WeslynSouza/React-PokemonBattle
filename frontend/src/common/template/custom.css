@@ -12,6 +12,7 @@ button{
 
 .content-wrapper{
     background-image: url('../../../img/46dc6aba55acce24953bbc1b09bd674c.png');
+    min-height: 88.4vh;
 }
 
 .icone-img{

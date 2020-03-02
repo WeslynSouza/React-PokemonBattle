@@ -1,0 +1,19 @@
+.wrapper{
+    background-color: transparent!important;
+}
+
+body{
+    background-image: url('../../img/46dc6aba55acce24953bbc1b09bd674c.png');
+}
+
+.login-box-body{
+    background-color: #eee;
+}
+
+.login-box button{
+    margin-left: 0px;
+}
+
+.login-box a:hover{
+    cursor: pointer;
+}
