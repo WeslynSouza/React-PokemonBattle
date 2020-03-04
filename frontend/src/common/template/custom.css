@@ -29,8 +29,12 @@ button{
     padding: 3px;
 }
 
-.box{
+.value-box{
     opacity: 97%;
+}
+
+.nav-tabs-custom>.nav-tabs>li.active{
+    border-top-color: #dd4b39;
 }
 
 .user-panel{

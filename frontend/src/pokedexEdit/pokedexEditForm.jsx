@@ -11,7 +11,7 @@ class PokedexEditForm extends Component{
     render(){
         const { handleSubmit, readOnly } = this.props
         return(
-            <form role='form' onSubmit={handleSubmit} encType='multipart/form-data'>
+            <form role='form' onSubmit={handleSubmit}>
                 <div className='box-body'>
                     <Field name='name' component={labelAndInput} readOnly={readOnly}
                         placeholder='Informe nome' label='Nome:' cols='12 4' />

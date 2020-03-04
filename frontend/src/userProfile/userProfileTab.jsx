@@ -1,28 +1,39 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 
 import Tabs from '../common/tabs/tabs'
 import TabsHeader from '../common/tabs/tabsHeader'
 import TabsContent from '../common/tabs/tabsContent'
 import TabHeader from '../common/tabs/tabHeader'
 import TabContent from '../common/tabs/tabContent'
+import UserProfileConfig from './userProfileConfig'
 
 class UserProfileTab extends Component{
+
+    constructor(props){
+        super(props)
+        this.state = { selected: 0 }
+        self = this
+    }
+
+    alteraSelect(selected){
+        self.setState({ selected })
+    }
     
     render(){
         return(
             <Tabs>
                 <TabsHeader>
-                    <TabHeader label='Perfil' icon='user' target='UserProfile'/>
-                    <TabHeader label='Configurações' icon='gear' target='UserConfig'/>
+                    <TabHeader label='Perfil' icon='user' target='UserProfile' 
+                        visible='true' selected={this.state.selected == 0} onClick={() => this.alteraSelect(0)}/>
+                    <TabHeader label='Configurações' icon='gear' target='UserConfig'
+                        visible='true' selected={this.state.selected == 1} onClick={() => this.alteraSelect(1)}/>
                 </TabsHeader>
                 <TabsContent>
-                    <TabContent id='UserProfile'>
-
+                    <TabContent id='UserProfile' selected={this.state.selected == 0} visible={this.state.selected == 0}>
+                        <h1>Informações do usuário</h1>
                     </TabContent>
-                    <TabContent id='UserConfig'>
-
+                    <TabContent id='UserConfig' selected={this.state.selected == 1} visible={this.state.selected == 1}>
+                        <UserProfileConfig/>
                     </TabContent>
                 </TabsContent>
             </Tabs>

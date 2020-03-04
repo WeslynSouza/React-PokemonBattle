@@ -34,7 +34,7 @@ class UserProfile extends Component{
                     </Grid>
 
                     <Grid cols='12 9'>
-                        <UserProfileTab></UserProfileTab>
+                        <UserProfileTab/>
                     </Grid>
                 </Content>
             </div>
