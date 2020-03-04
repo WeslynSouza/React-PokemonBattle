@@ -3,7 +3,7 @@ import If from '../operator/if'
 
 export default props => (
     <If test={!props.hide}>
-        <div className='form-group has-feedback'>
+        <div className={`form-group has-feedback ${props.hidden ? 'hidden' : ''}`}>
             <input {...props.input}
                 className='form-control'
                 placeholder={props.placeholder}

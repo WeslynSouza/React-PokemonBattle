@@ -2,10 +2,27 @@ const _ = require('lodash')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 const User = require('./user')
+const errorHandler = require('../common/errorHandler')
 const env = require('../../.env')
 
 const emailRegex = /\S+@\S+.\S+/
 const passwordRegex = /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})/
+
+/*
+User.methods(['get', 'post', 'put', 'delete'])
+User.updateOptions({ new: true, runValidators: true })
+User.after('post', errorHandler ).after('put', errorHandler)
+
+User.route('count', (req, res, next) => {
+    User.count((error, value) => {
+        if(error){
+            res.status(500).json({errors: [error]})
+        }else{
+            res.json({values})
+        }
+    })
+})
+*/
 
 const sendErrorsFromDB = (res, dbErrors) =>{
     const errors = []
@@ -22,10 +39,10 @@ const login = (req, res, next) => {
             return sendErrorsFromDB(res, err)
         }else if(user && bcrypt.compareSync(password, user.password)){
             const token = jwt.sign(user, env.authSecret, {
-                expiresIn: '1 day'
+                expiresIn: '1 hour'
             })
-            const { name, email } = user
-            res.json({ name, email, token })
+            const { name, email, level } = user
+            res.json({ name, email, token, level })
         }else{
             return res.status(400).send({ errors: ['Usuário/Senha inválidos'] })
         }
@@ -45,6 +62,7 @@ const signup = (req, res, next) =>{
     const email = req.body.email || ''
     const password = req.body.password || ''
     const confirmPassword = req.body.confirm_password || ''
+    const level = req.body.level || ''
 
     if(!email.match(emailRegex)){
         return res.status(400).send({ errors: ['O e-mail informado está invalido']})
@@ -70,11 +88,12 @@ const signup = (req, res, next) =>{
         }else if(user){
             return res.status(400).send({errors: ['Usúario já cadastrado.']})
         }else{
-            const newUser = new User({ name, email, password: passwordHash })
+            const newUser = new User({ name, email, password: passwordHash, level })
             newUser.save(err => {
                 if(err){
                     return sendErrorsFromDB(res, err)
                 }else{
+
                     login(req, res, next)
                 }
             })

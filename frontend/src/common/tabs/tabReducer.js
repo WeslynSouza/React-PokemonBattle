@@ -1,6 +1,8 @@
 const INITIAL_STATE = {
     selected: '',
-    visible: {}
+    visible: {},
+    userSelected: '',
+    userVisible: {}
 }
 
 export default (state = INITIAL_STATE, action) => {

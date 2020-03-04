@@ -7,11 +7,16 @@ module.exports = function(server){
     const protectedApi = express.Router()
     server.use('/api', protectedApi)
 
-    protectedApi.use(auth)
+    //protectedApi.use(auth)
 
     //Rotas da Galeria Pokemon
     const PokemonGallery = require('../api/pokemonGallery/pokemonGalleryService')
     PokemonGallery.register(protectedApi, '/pokemonGallery')
+
+    
+    const User = require('../api/user/userService')
+    User.register(protectedApi, '/User')
+    
 
     /*
      * Rotas abertas

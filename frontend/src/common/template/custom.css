@@ -33,6 +33,10 @@ button{
     opacity: 97%;
 }
 
+.user-panel{
+    background-color: #ffffffaa;
+}
+
 #listPokedex{
     height: 63rem;
     overflow: auto;

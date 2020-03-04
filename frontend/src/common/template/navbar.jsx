@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { logout } from '../../auth/authActions'
+import { Link } from 'react-router'
 
 class Navbar extends Component {
 
@@ -19,23 +20,28 @@ class Navbar extends Component {
         return(
             <div className='navbar-custom-menu'>
                 <ul className='nav navbar-nav'>
-                    <li onMouseLeave={() => this.changeOpen()} className={`dropdown user 
+                    <li onClick={() => this.changeOpen()} className={`dropdown user 
                         user-menu ${this.state.open ? 'open' : ''}`}>
                         <a href='javascript:;' onClick={() => this.changeOpen()}
                             aria-expanded={this.state.open ? 'true' : 'false'}
                             className='dropdown-toggle'
                             data-toggle='dropdown'>
-                            <img src='https://lh3.googleusercontent.com/proxy/fwJzkS9CWB_-DM4Zbww1n7pLos5lzW3Msb7IhMOCFVKiwl0KBSiEu3qQJwpv9cNaxagdOtHnknHCS7yUBLugyZye5RepEuRs9DMo0QOYWBg3tthD1xiEjA46X7XGrA'
+                            <img src='https://cdn.weasyl.com/static/media/20/97/c2/2097c262fee251d056e7d40a177bc8cef7c9006b8776abb0f2ba0c8e0d0ad134.png'
                                 className='user-image' alt='User Image' />
                             <span className='hidden-xs'>{name}</span>
                         </a>
                         <ul className='dropdown-menu'>
                             <li className='user-header'>
-                                <img src='https://lh3.googleusercontent.com/proxy/fwJzkS9CWB_-DM4Zbww1n7pLos5lzW3Msb7IhMOCFVKiwl0KBSiEu3qQJwpv9cNaxagdOtHnknHCS7yUBLugyZye5RepEuRs9DMo0QOYWBg3tthD1xiEjA46X7XGrA'
+                                <img src='https://cdn.weasyl.com/static/media/20/97/c2/2097c262fee251d056e7d40a177bc8cef7c9006b8776abb0f2ba0c8e0d0ad134.png'
                                     className='img-circle' alt='User Image' />
                                 <p>{name}<small>{email}</small></p>
                             </li>
                             <li className='user-footer'>
+                                <div className='pull-left'>
+                                    <Link to='profile'>
+                                        <button className='btn btn-default btn-flat'>Perfil</button>
+                                    </Link>
+                                </div>
                                 <div className='pull-right'>
                                     <a href='#' onClick={this.props.logout}
                                         className='btn btn-default btn-flat'>Sair</a>

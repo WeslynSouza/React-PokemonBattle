@@ -3,11 +3,11 @@ import axios from 'axios'
 import consts from '../consts'
 
 export function login(values){
-    return submit(values, `${consts.OAPI_URL}/login`)
+    return submit( values, `${consts.OAPI_URL}/login`)
 }
 
 export function signup(values){
-    return submit(values, `${consts.OAPI_URL}/signup`)
+    return submit( values, `${consts.OAPI_URL}/signup`)
 }
 
 function submit(values, url){
