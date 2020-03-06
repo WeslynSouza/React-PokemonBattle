@@ -20,18 +20,6 @@ class PokedexList extends Component{
         return(
             <div className='btn-group-vertical col-sm-2 col-xs-3' id='listPokedex'>
                 {this.renderPokemon()}
-                <div className='btn-group-item btn btn-github'>Teste</div>
-                <div className='btn-group-item btn btn-github'>Teste</div>
-                <div className='btn-group-item btn btn-github'>Teste</div>
-                <div className='btn-group-item btn btn-github'>Teste</div>
-                <div className='btn-group-item btn btn-github'>Teste</div>
-                <div className='btn-group-item btn btn-github'>Teste</div>
-                <div className='btn-group-item btn btn-github'>Teste</div>
-                <div className='btn-group-item btn btn-github'>Teste</div>
-                <div className='btn-group-item btn btn-github'>Teste</div>
-                <div className='btn-group-item btn btn-github'>Teste</div>
-                <div className='btn-group-item btn btn-github'>Teste</div>
-                <div className='btn-group-item btn btn-github'>Teste</div>
             </div>
         )
     }

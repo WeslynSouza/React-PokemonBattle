@@ -37,6 +37,11 @@ button{
     border-top-color: #dd4b39;
 }
 
+.iconBox{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .user-panel{
     background-color: #ffffffaa;
 }

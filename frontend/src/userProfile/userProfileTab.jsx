@@ -25,14 +25,19 @@ class UserProfileTab extends Component{
                 <TabsHeader>
                     <TabHeader label='Perfil' icon='user' target='UserProfile' 
                         visible='true' selected={this.state.selected == 0} onClick={() => this.alteraSelect(0)}/>
-                    <TabHeader label='Configurações' icon='gear' target='UserConfig'
+                    <TabHeader label='Galeria' icon='book' target='UserGallery'
                         visible='true' selected={this.state.selected == 1} onClick={() => this.alteraSelect(1)}/>
+                    <TabHeader label='Configurações' icon='gear' target='UserConfig'
+                        visible='true' selected={this.state.selected == 2} onClick={() => this.alteraSelect(2)}/>
                 </TabsHeader>
                 <TabsContent>
                     <TabContent id='UserProfile' selected={this.state.selected == 0} visible={this.state.selected == 0}>
                         <h1>Informações do usuário</h1>
                     </TabContent>
-                    <TabContent id='UserConfig' selected={this.state.selected == 1} visible={this.state.selected == 1}>
+                    <TabContent id='UserGallery' selected={this.state.selected == 1} visible={this.state.selected == 1}>
+                        
+                    </TabContent>
+                    <TabContent id='UserConfig' selected={this.state.selected == 2} visible={this.state.selected == 2}>
                         <UserProfileConfig/>
                     </TabContent>
                 </TabsContent>
