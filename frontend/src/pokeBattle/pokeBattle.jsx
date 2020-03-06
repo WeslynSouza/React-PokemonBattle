@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
 import Content from '../common/template/content'
-import { Inicio, Fim } from '../common/rounds/inicioFim'
-import ChosePokemon from '../common/rounds/chosePokemon'
-import { PlayerRound, Transicao } from '../common/rounds/playerEnemy'
+import { Inicio, Fim } from './pokeBattleStartEnd'
+import ChosePokemon from './pokeBattleGallery'
+import { PlayerRound, Transicao } from './pokeBattleRounds'
 import If from '../common/operator/if'
 
 class PokeBattle extends Component {

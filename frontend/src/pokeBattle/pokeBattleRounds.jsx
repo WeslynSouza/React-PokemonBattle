@@ -1,8 +1,8 @@
 import React from 'react'
-import ValueBoxSolid from '../widget/valueBoxSolid'
-import Row from '../layout/row'
-import Grid from '../layout/grid'
-import If from '../operator/if'
+import ValueBoxSolid from '../common/widget/valueBoxSolid'
+import Row from '../common/layout/row'
+import Grid from '../common/layout/grid'
+import If from '../common/operator/if'
 
 export const PlayerRound = props => {
     const player = props.player

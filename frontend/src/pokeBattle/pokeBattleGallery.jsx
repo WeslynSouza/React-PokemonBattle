@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { getList } from '../../pokedexEdit/pokedexEditActions'
+import { getList } from '../pokedexEdit/pokedexEditActions'
 
-import ValueBox from '../widget/valueBox'
-import List from '../template/list'
-import ListItem from '../template/listItem'
+import ValueBox from '../common/widget/valueBox'
+import List from '../common/template/list'
+import ListItem from '../common/template/listItem'
 
 class PokemonChose extends Component{
 

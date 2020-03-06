@@ -15,6 +15,11 @@ button{
     min-height: 88.4vh;
 }
 
+#userGallery{
+    height: 63rem;
+    overflow: auto;
+}
+
 .icone-img{
     margin-top: -6px;
 }
@@ -73,5 +78,8 @@ button{
     margin-top: 10px;
 }
 
+#pkBox{
+    height: 200px;
+}
 
 

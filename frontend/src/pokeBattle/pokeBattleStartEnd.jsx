@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ValueBoxSolid from '../widget/valueBoxSolid'
+import ValueBoxSolid from '../common/widget/valueBoxSolid'
 
 export const Inicio = props =>(
     <div>

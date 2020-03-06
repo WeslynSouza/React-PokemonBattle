@@ -6,6 +6,7 @@ import TabsContent from '../common/tabs/tabsContent'
 import TabHeader from '../common/tabs/tabHeader'
 import TabContent from '../common/tabs/tabContent'
 import UserProfileConfig from './userProfileConfig'
+import UserProfileGallery from './userProfileGallery'
 
 class UserProfileTab extends Component{
 
@@ -35,7 +36,7 @@ class UserProfileTab extends Component{
                         <h1>Informações do usuário</h1>
                     </TabContent>
                     <TabContent id='UserGallery' selected={this.state.selected == 1} visible={this.state.selected == 1}>
-                        
+                        <UserProfileGallery/>
                     </TabContent>
                     <TabContent id='UserConfig' selected={this.state.selected == 2} visible={this.state.selected == 2}>
                         <UserProfileConfig/>
