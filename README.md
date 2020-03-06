@@ -1,6 +1,7 @@
 # React-PokemonBattle
 
-Um site com base em um jogo de batalha de pokémon, onde os usuários batalham utilizando o sistema de turnos com pokémons pré-cadastrados no site pelo administrador. 
+Um site com base em um jogo de batalha de pokémon, onde os usuários batalham utilizando o sistema de turnos com pokémons pré-cadastrados no site pelo administrador.
+
 A aplicação é composta por um login/cadastro com níveis de usuários diferenciando os jogadores do administrador, uma galeria para que os jogadores possam visualizar as informações dos pokémons cadastrados, uma área de configuração, onde o administrador poderá cadastrar/atualizar/excluir os pokémons, uma página de perfil do usuário e a pagina de batalha onde o jogador escolhe o seu pokémon e batalha contra outro aleatório. 
 
 ## ScreenShots
