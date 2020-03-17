@@ -5,6 +5,7 @@ Um site com base em um jogo de batalha de pokémon, onde os usuários batalham u
 A aplicação é composta por um login/cadastro com níveis de usuários diferenciando os jogadores do administrador, uma galeria para que os jogadores possam visualizar as informações dos pokémons cadastrados, uma área de configuração, onde o administrador poderá cadastrar/atualizar/excluir os pokémons, uma página de perfil do usuário e a pagina de batalha onde o jogador escolhe o seu pokémon e batalha contra outro aleatório.  
 
 
+
 ## ScreenShots
 
 ![Login](https://user-images.githubusercontent.com/54729353/76039228-89991e80-5f2a-11ea-9113-d5f1ae87fefa.png)
