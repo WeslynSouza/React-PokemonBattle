@@ -8,7 +8,9 @@ export default props => (
                 className='form-control'
                 placeholder={props.placeholder}
                 readOnly={props.readOnly}
-                type={props.type}/>
+                type={props.type}
+                value={props.values}
+                autoFocus={props.focus}/>
             <span className={`glyphicon glyphicon-${props.icon}
                 form-control-feedback`}></span>
         </div>

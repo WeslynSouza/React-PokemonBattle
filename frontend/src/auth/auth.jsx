@@ -23,12 +23,14 @@ class Auth extends Component{
 
     onSubmit(values){
         const { login, signup } = this.props
-        this.state.loginMode ? login(values) : signup(values)
+        const cash = 1200
+        this.state.loginMode ? login(values) : signup(values, cash)
     }
     
     render(){
         const { loginMode } = this.state
         const { handleSubmit } = this.props
+
         return (
             <div className='wrapper'>
                 <div className='login-box'>

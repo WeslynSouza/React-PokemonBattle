@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
     email: { type: String, required: true },
     password: { type: String, min: 6, max: 16, required: true },
     pokemons: [pokeUserSchema],
-    cash: { type: Number, min: 0},
+    cash: { type: Number, min: 0, required: true},
     level: { type: Number }
 })
 

@@ -41,8 +41,8 @@ const login = (req, res, next) => {
             const token = jwt.sign(user, env.authSecret, {
                 expiresIn: '1 hour'
             })
-            const { name, email, level } = user
-            res.json({ name, email, token, level })
+            const { name, email, level, cash } = user
+            res.json({ name, email, token, level, cash })
         }else{
             return res.status(400).send({ errors: ['Usuário/Senha inválidos'] })
         }
@@ -62,7 +62,8 @@ const signup = (req, res, next) =>{
     const email = req.body.email || ''
     const password = req.body.password || ''
     const confirmPassword = req.body.confirm_password || ''
-    const level = req.body.level || ''
+    const cash = req.body.cash || '1200'
+    const level = req.body.level || '0'
 
     if(!email.match(emailRegex)){
         return res.status(400).send({ errors: ['O e-mail informado está invalido']})
@@ -88,7 +89,7 @@ const signup = (req, res, next) =>{
         }else if(user){
             return res.status(400).send({errors: ['Usúario já cadastrado.']})
         }else{
-            const newUser = new User({ name, email, password: passwordHash, level })
+            const newUser = new User({ name, email, password: passwordHash, level, cash })
             newUser.save(err => {
                 if(err){
                     return sendErrorsFromDB(res, err)
