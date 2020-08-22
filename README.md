@@ -36,7 +36,7 @@ git clone https://github.com/WeslynSouza/React-PokemonBattle
 npm install
 cd backend
 npm run dev
-cd frontend
+cd ../frontend
 npm run dev
 ```
 
