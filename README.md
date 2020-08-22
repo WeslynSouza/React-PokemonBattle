@@ -34,7 +34,10 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 ```sh
 git clone https://github.com/WeslynSouza/React-PokemonBattle
 npm install
-npm start
+cd backend
+npm run dev
+cd frontend
+npm run dev
 ```
 
 ## 💡 Como contribuir
