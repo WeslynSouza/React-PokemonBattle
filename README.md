@@ -27,7 +27,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 🔖 Layout
 
-![Index](https://user-images.githubusercontent.com/54729353/76039248-974ea400-5f2a-11ea-83cb-f157ddb9e2c6.png)
+![Pokedex](https://user-images.githubusercontent.com/54729353/76039266-a5042980-5f2a-11ea-8860-2f5c2d8c2cc8.png)
 
 ## 📌 Como executar
 
